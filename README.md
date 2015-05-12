@@ -1,5 +1,6 @@
-# Instagram Image Scraper
-in progress 
+## Instagram Image Scraper
+
+Python webscraper using Mechanize library. Scrapes images off public instagram profiles.
 
 <sub>5/08/2015:</sub>
 

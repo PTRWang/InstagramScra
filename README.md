@@ -5,8 +5,8 @@ in progress
 <sub>added download method from www.instagram.com
 </li></sub>
 
-<sub>5/09/2015:/sub><li>
+<sub>5/09/2015:</sub><li>
 <sub>changed download host to www.websta.me
 </li></sub>
-<sub><li>added handling for videos</sub>
-</li>
+<li><sub>added handling for videos</sub></li>
+

@@ -7,6 +7,6 @@ in progress
 
 <sub>5/09/2015:/sub><li>
 <sub>changed download host to www.websta.me
-</li>
-<sub><li>added handling for videos</sub>
 </li></sub>
+<sub><li>added handling for videos</sub>
+</li>

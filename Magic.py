@@ -40,11 +40,6 @@ class Scraper():
 		browser.open(website)
 		response = browser.response().read()
 		soup = BeautifulSoup(response)
-		#text_file = open(PATH + "correct.txt", "w")
-		#text_file.write(str(soup))
-		#text_file.close()
-		#soup = soup.prettify().encode('utf-8')
-		#photo = soup.find('span', {'class':"counts_media"})
 		new = re.findall('<span class="counts_media">"?\'?([^"\'</span>]*)', str(soup))
 		try:
 			number = int(new[0])
@@ -75,20 +70,11 @@ class Scraper():
 		print ('Grabbing Image URLs...\n')
 		a = 1
 		while (buffer):
-			#print a
 			browser.open(website)	
-			#for link in browser.links():
-			#	print link.text
 			response = browser.response().read()
 			soup = BeautifulSoup(response)
 			soup = soup.prettify().encode('utf-8')
-			#links = soup.findAll('script', {'type': 'text/javascript'})
-			#text_file = open(PATH + "correct.txt", "w")
-			#text_file.write(str(soup))
-			#text_file.close()
 			list = re.findall('<a class="mainimg" href="?\'?([^"\'>]*)', str(soup)) #list of links on the screen
-			#list = re.findall('standard_resolution":{ "?\'?([^"\'>]*)', links)
-			#print len(list)
 			a+= 1
 			j = 1
 			for i in list:
@@ -120,7 +106,6 @@ class Scraper():
 		for i in self.listofURL:
 			a += 1
 			if i[-3:] == 'jpg':
-				#print i[-3:]
 				f = open(dir + "/" + self.username + str(a) + '.jpg', 'wb')
 				f.write(urllib2.urlopen(i).read())
 				f.close()
@@ -137,6 +122,3 @@ def main():
 	check.download()
 
 main()
-#realURL('http://websta.me/p/670314358532487640_318472829')
-#grabURL('evmklee')
-#seleniumIMP(url + 'privatekanye')
